@@ -1,0 +1,32 @@
+/* LowerHeader.css */
+.lowerHeader {
+  display: flex;
+  justify-content: flex-start; /* Aligns everything to the left */
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #232f3e;
+  width: 100vw; /* Full width of the viewport */
+  z-index: 100;
+  position: relative; /* Ensures it sits directly under the main header */
+  bottom: 290px;
+}
+
+.lowerHeader__left {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Adjust space between items */
+}
+
+.lowerHeader__link {
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.lowerHeader__link:hover {
+  text-decoration: underline;
+}
+
+.lowerHeader__rightContainer {
+  display: none; /* Hides right container */
+}
