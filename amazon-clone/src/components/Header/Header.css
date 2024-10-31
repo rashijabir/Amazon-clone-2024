@@ -1,0 +1,176 @@
+/* Header.css */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(19, 25, 33); /* Dark blue background */
+  padding: 10px 20px; /* Padding around the header */
+  position: fixed; /* Fix header at the top */
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 60px; /* Fixed height for the header */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.header__logo {
+  width: 100px; /* Logo size */
+  object-fit: contain;
+}
+
+.header__deliver {
+  display: flex;
+  align-items: center;
+  margin-right: 20px; /* Space from the logo */
+  color: #ffffff; /* White text */
+  font-size: 14px; /* Font size */
+}
+
+.header__locationIcon {
+  margin-left: 7px; /* Close proximity to delivery location text */
+  color: #ffffff; /* Change icon color to white */
+}
+
+.header__search {
+  display: flex;
+  flex: 1; /* Take remaining space */
+  align-items: center;
+  background-color: #ffffff; /* White background for search */
+  border-radius: 10px; /* Rounded corners for the entire search bar */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  overflow: hidden; /* To ensure no overflow for rounded corners */
+  max-width: 900px; /* Increased maximum width */
+  margin-right: 20px; /* Space from other elements */
+}
+
+.header__searchDropdown {
+  background-color: #f3f3f3; /* Light gray for dropdown */
+  border: 1px solid #d5d9d9; /* Light border */
+  border-radius: 10px 0 0 10px; /* Rounded corners matching the search bar */
+  display: flex;
+  align-items: center; /* Center items vertically */
+}
+
+.header__searchDropdownSelect {
+  background-color: transparent; /* Make background transparent for a seamless look */
+  border: none; /* No border */
+  outline: none; /* No outline */
+  padding: 15px; /* Padding for dropdown */
+  font-size: 16px; /* Font size for better visibility */
+  color: #333; /* Dark text color */
+  cursor: pointer; /* Pointer cursor for dropdown */
+  border-radius: 10px 0 0 10px; /* Same rounding as dropdown */
+  appearance: none; /* Remove default styling */
+  width: 80px; /* Adjusted width for a smaller dropdown */
+}
+
+.header__searchInput {
+  height: 50px; /* Height of the input for prominence */
+  padding: 0 10px; /* Horizontal padding */
+  border: none; /* No border */
+  width: 100%; /* Full width */
+  background-color: white; /* White background */
+  color: #333; /* Dark text */
+  font-size: 16px; /* Font size for visibility */
+  border-radius: 0 10px 10px 0; /* Rounded corners matching dropdown */
+}
+
+.header__searchButton {
+  padding: 0 20px; /* Padding for button */
+  height: 50px; /* Match height with input */
+  background-color: #febd69; /* Button color */
+  border: 1px solid #f3a847; /* Border for button */
+  border-left: none; /* No left border */
+  border-radius: 0 10px 10px 0; /* Rounded right corners to match */
+  cursor: pointer; /* Pointer cursor */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center content */
+}
+
+.header__searchButton:hover {
+  background-color: #f3a847; /* Darker background on hover */
+}
+.header__flag {
+  width: 20px; /* Size for flags */
+  margin-right: 5px; /* Space between flag and text */
+}
+
+.header__languageText {
+  margin-right: 5px; /* Space before dropdown icon */
+}
+
+.header__languageDropdownIcon {
+  color: white; /* Color for the dropdown icon */
+}
+
+.header__nav {
+  display: flex; /* Flexbox for navigation items */
+}
+
+.header__option {
+  display: flex; /* Flex for options */
+  flex-direction: column; /* Column layout */
+  margin-left: 15px; /* Space between options */
+  color: white; /* White text */
+  font-size: 12px; /* Font size for options */
+}
+
+.header__optionLineOne {
+  font-size: 10px; /* Smaller font size */
+}
+
+.header__optionLineTwo {
+  font-size: 13px; /* Main line size */
+  font-weight: 800; /* Bold text */
+}
+
+.header__optionBasket {
+  display: flex; /* Flex for basket */
+  align-items: center;
+  color: white; /* White text */
+  margin-left: 15px; /* Space before basket */
+}
+
+.header__basketCount {
+  margin-left: 5px; /* Space for count */
+  font-weight: 800; /* Bold for count */
+  color: #cd9042; /* Specific color for count */
+}
+
+/* Ensure main content does not overlap with the header */
+main {
+  margin-top: 70px; /* Space for the fixed header */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column; /* Stack items on smaller screens */
+    align-items: flex-start; /* Align to the start */
+  }
+
+  .header__search {
+    margin: 10px 0; /* Margin adjustments */
+  }
+
+  .header__nav {
+    flex-direction: row; /* Row for navigation */
+    margin-top: 10px; /* Space between nav and search */
+  }
+
+  .header__option {
+    margin-left: 10px; /* Smaller space on mobile */
+  }
+}
